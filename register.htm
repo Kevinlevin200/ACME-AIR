@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro - ACME AIR</title>
+  <link rel="stylesheet" href="css/register.css" />
+</head>
+<body>
+  <body class="register-container">
+  <div class="container">
+    <div class="header">
+      <img src="LogoPagina.png" alt="Logo ACME AIR" class="logo" />
+    </div>
+
+    <div class="form-container">
+      <form>
+        <input type="text" placeholder="Nombre Completo" required />
+        <input type="text" placeholder="No. Identificación" required />
+        <input type="email" placeholder="E-mail" required />
+        <input type="tel" placeholder="Teléfono" required />
+        
+        <select required>
+          <option value="" disabled selected>Ciudad</option>
+          <option value="bogota">Bogotá</option>
+          <option value="medellin">Medellín</option>
+          <option value="cali">Cali</option>
+          <option value="barranquilla">Barranquilla</option>
+        </select>
+
+        <button type="submit">GUARDAR</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
