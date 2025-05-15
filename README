@@ -1,0 +1,77 @@
+# ✈️ ACME AIR - Proyecto Web (Maquetación UI/UX)
+
+Este proyecto consiste en el desarrollo de una interfaz web responsiva basada en los diseños entregados por el equipo de UI/UX para la aerolínea ficticia **ACME AIR**. El objetivo principal fue **maquetar las diferentes vistas** en HTML y CSS, enfocándose únicamente en la estructura visual, navegación entre páginas y adaptabilidad a dispositivos móviles.
+
+## 📱 Requisitos clave
+
+- Sitio **disponible solo para dispositivos móviles**.
+- Maquetación completa de las vistas entregadas por diseño.
+- Redirección funcional entre páginas usando botones y enlaces.
+- Interacción básica con almacenamiento local (`localStorage`) para simular persistencia de datos.
+- Todos los estilos están centralizados en un único archivo CSS por recomendación del equipo.
+
+---
+
+## 📂 Estructura del proyecto
+
+/acme-air/
+├── index.html
+├── login.html
+├── register.html
+├── recover.html
+├── crearpassword.html
+├── dashboard.html
+├── buscar.html
+├── disponibles.html
+├── checkin.html
+├── misvuelos.html
+├── css/
+│ └── style.css
+└── img/
+└── logo.png
+
+
+---
+
+## 🖼️ Vistas implementadas
+
+| Página                 | Descripción                                                                 |
+|------------------------|-----------------------------------------------------------------------------|
+| `login.html`           | Formulario de inicio de sesión con enlaces a registro y recuperación.       |
+| `register.html`        | Registro de usuario con campos requeridos y ciudad.                         |
+| `recover.html`         | Recuperación de contraseña vía email.                                       |
+| `crearpassword.html`   | Creación de nueva contraseña.                                               |
+| `dashboard.html`       | Menú principal con saludo, opciones y botón de cerrar sesión.               |
+| `buscar.html`          | Búsqueda de vuelos (origen, destino, fechas, tipo de viaje).                |
+| `disponibles.html`     | Resultados de vuelos disponibles, selección de precios.                     |
+| `checkin.html`         | Check-In con campos para confirmar datos del vuelo y contacto.              |
+| `misvuelos.html`       | Visualización de vuelos ya registrados por el usuario.                      |
+
+---
+
+## 📌 Funcionalidades
+
+- ✅ Navegación entre páginas usando botones y `window.location.href`.
+- ✅ Simulación de guardar datos de vuelos con `localStorage`.
+- ✅ Restricción de acceso en pantallas grandes con advertencia para PC.
+- ✅ Adaptado exclusivamente para pantallas móviles.
+
+---
+
+## 🧪 Recomendación para pruebas
+
+- Usar el navegador en modo desarrollador (F12) → "Vista móvil".
+- Probar en un entorno local usando **Live Server** para evitar errores de ruta o caché.
+
+---
+
+## 🧑‍🎓 Autor
+
+**Kevin Santiago Rivero Rueda**  
+
+---
+
+## 💤 Estado del autor
+
+Terminando este proyecto sin sueño pero con el deber cumplido.
+Gracias por revisar. ✌️
