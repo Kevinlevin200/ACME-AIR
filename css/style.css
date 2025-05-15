@@ -30,7 +30,7 @@ body {
 
 /* Header con degradado para Registro, Recuperar, Crear Contraseña */
 .header {
-  background: linear-gradient(to right, #d1369b, #497bdc);
+  background: linear-gradient(to right, #ffffff, #ffffff);
   padding: 30px;
   text-align: center;
 }
@@ -161,4 +161,358 @@ button:hover,
 
 .recover-container .back-link:hover {
   text-decoration: underline;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f3f3f3;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.dashboard-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  padding: 30px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.logo {
+  max-width: 180px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.option-btn {
+  padding: 14px;
+  background-color: #ffffff;
+  border: 2px solid #2196F3;
+  color: #2196F3;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.option-btn:hover {
+  background-color: #e3f2fd;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.logout-btn {
+  padding: 12px 20px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #d32f2f;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background-color: #fff;
+  text-align: center;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.btn {
+  background-color: #2196F3;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #1976d2;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  padding: 2rem;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background-color: #fff;
+  text-align: center;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+.vuelos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tarjeta-vuelo {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+.seleccionar {
+  margin-top: 10px;
+  background-color: #2196F3;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.seleccionar:hover {
+  background-color: #1976d2;
+}
+
+.btn {
+  background-color: #ccc;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #999;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background-color: #fff;
+  text-align: center;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+.flight-info {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  text-align: left;
+}
+
+input {
+  padding: 12px;
+  margin-bottom: 1rem;
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn {
+  background-color: #2196F3;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #1976d2;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background-color: #fff;
+  text-align: center;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+.vuelo {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.btn {
+  margin-top: 20px;
+  background-color: #2196F3;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #1976d2;
+}
+
+/* Ocultar todo el contenido en pantallas grandes */
+@media (min-width: 768px) {
+  body > *:not(.desktop-warning) {
+    display: none !important;
+  }
+
+  .desktop-warning {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 2rem;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
+  }
+}
+
+/* Ocultar advertencia en móviles */
+@media (max-width: 767px) {
+  .desktop-warning {
+    display: none !important;
+  }
 }
