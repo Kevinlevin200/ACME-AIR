@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - ACME AIR</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="desktop-warning">
+        <h2>Este sitio solo está disponible en dispositivos móviles 📱</h2>
+        <p>Por favor accede desde tu celular para continuar.</p>
+      </div>
+      
+  <div class="dashboard-container">
+    <header>
+      <img src="logo.png" alt="Logo ACME AIR" class="logo" />
+    </header>
+
+    <main>
+      <h1>¡Hola, Usuario!</h1>
+      <p class="subtitle">¿Qué quieres hacer?</p>
+
+      <div class="button-group">
+        <a href="buscar.html" class="option-btn">Buscar vuelos</a>
+        <a href="checkin.html" class="option-btn">Check In</a>
+        <a href="mis-vuelos.html" class="option-btn">Mis vuelos</a>
+      </div>
+    </main>
+
+    <footer>
+      <button class="logout-btn" onclick="cerrarSesion()">Cerrar sesión</button>
+    </footer>
+  </div>
+
+  <script>
+    function cerrarSesion() {
+      alert("Sesión cerrada. Volviendo al inicio.");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

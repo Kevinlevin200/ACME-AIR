@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mis Vuelos - ACME AIR</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="desktop-warning">
+        <h2>Este sitio solo está disponible en dispositivos móviles 📱</h2>
+        <p>Por favor accede desde tu celular para continuar.</p>
+      </div>
+      
+  <div class="container">
+    <img src="logo.png" alt="ACME AIR" class="logo" />
+    <h2>Mis Vuelos</h2>
+
+    <div id="listaVuelos"></div>
+
+    <button onclick="window.location.href='dashboard.html'" class="btn">VOLVER</button>
+  </div>
+
+  <script>
+    const lista = document.getElementById("listaVuelos");
+    const vuelos = JSON.parse(localStorage.getItem("misVuelos")) || [];
+
+    if (vuelos.length === 0) {
+      lista.innerHTML = "<p>No tienes vuelos registrados.</p>";
+    } else {
+      vuelos.forEach((v, i) => {
+        const div = document.createElement("div");
+        div.className = "vuelo";
+        div.innerHTML = `
+          <p><strong>${i + 1}. ${v.origen} → ${v.destino}</strong></p>
+          <p>Hora: ${v.hora} | Precio: ${v.precio}</p>
+          <p>Pasajero: ${v.nombre} | Teléfono: ${v.telefono}</p>
+        `;
+        lista.appendChild(div);
+      });
+    }
+  </script>
+</body>
+</html>

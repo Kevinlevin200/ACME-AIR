@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buscar Vuelos - ACME AIR</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <div class="desktop-warning">
+        <h2>Este sitio solo está disponible en dispositivos móviles 📱</h2>
+        <p>Por favor accede desde tu celular para continuar.</p>
+      </div>
+      
+  <div class="container">
+    <img src="logo.png" alt="ACME AIR" class="logo" />
+    <h2>Buscar Vuelos</h2>
+
+    <form onsubmit="buscarVuelos(event)">
+      <label><input type="checkbox" /> Solo ida</label>
+
+      <select required>
+        <option disabled selected>Origen</option>
+        <option>Bogotá</option>
+        <option>Medellín</option>
+        <option>Cali</option>
+      </select>
+
+      <select required>
+        <option disabled selected>Destino</option>
+        <option>Cartagena</option>
+        <option>Barranquilla</option>
+        <option>Santa Marta</option>
+      </select>
+
+      <input type="date" required placeholder="Fecha de salida" />
+      <input type="date" placeholder="Fecha de regreso" />
+
+      <button type="submit" class="btn">BUSCAR</button>
+    </form>
+  </div>
+
+  <script>
+    function buscarVuelos(event) {
+      event.preventDefault();
+      window.location.href = "disponibles.html";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link rel="stylesheet" href="css/style.css" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recuperar Contraseña - ACME AIR</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <div class="desktop-warning">
+    <h2>Este sitio solo está disponible en dispositivos móviles 📱</h2>
+    <p>Por favor accede desde tu celular para continuar.</p>
+  </div>
+  
+  <body class="recover-page">
+
+  <div class="recover-container">
+    <img src="logo.png" alt="ACME AIR" class="logo" />
+    <h2>Recuperar Contraseña</h2>
+
+    <form onsubmit="recoverPassword(event)">
+      <input type="email" placeholder="Ingresa tu correo" required />
+      <button type="submit" class="btn">ENVIAR ENLACE</button>
+    </form>
+
+    <div class="links">
+      <a href="register.html">Crear cuenta</a><br/>
+    </div>
+  </div>
+
+  <script>
+    function recoverPassword(event) {
+      event.preventDefault();
+      alert("Si tu correo está registrado, recibirás un enlace para restablecer la contraseña.");
+      
+    }
+    
+    
+  </script>
+</body>
+</html>

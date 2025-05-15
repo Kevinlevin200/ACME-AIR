@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Check In - ACME AIR</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="desktop-warning">
+        <h2>Este sitio solo está disponible en dispositivos móviles 📱</h2>
+        <p>Por favor accede desde tu celular para continuar.</p>
+      </div>
+      
+  <div class="container">
+    <img src="logo.png" alt="ACME AIR" class="logo" />
+    <h2>Check In</h2>
+
+    <div class="flight-info" id="vueloSeleccionado">
+      <p><strong>Vuelo:</strong> </p>
+    </div>
+
+    <form onsubmit="guardarCheckIn(event)">
+      <input type="text" id="nombre" placeholder="Nombre completo" required />
+      <input type="tel" id="telefono" placeholder="Número de teléfono" required />
+      <button type="submit" class="btn">GUARDAR</button>
+    </form>
+  </div>
+
+  <script>
+    const vuelo = JSON.parse(localStorage.getItem("vueloSeleccionado"));
+    if (vuelo) {
+      document.getElementById("vueloSeleccionado").innerHTML = `
+        <p><strong>Origen:</strong> ${vuelo.origen}</p>
+        <p><strong>Destino:</strong> ${vuelo.destino}</p>
+        <p><strong>Hora:</strong> ${vuelo.hora}</p>
+        <p><strong>Precio:</strong> ${vuelo.precio}</p>
+      `;
+    }
+
+    function guardarCheckIn(event) {
+      event.preventDefault();
+      const nombre = document.getElementById("nombre").value;
+      const telefono = document.getElementById("telefono").value;
+
+      const vueloConfirmado = {
+        ...vuelo,
+        nombre,
+        telefono
+      };
+
+      let misVuelos = JSON.parse(localStorage.getItem("misVuelos")) || [];
+      misVuelos.push(vueloConfirmado);
+      localStorage.setItem("misVuelos", JSON.stringify(misVuelos));
+
+      alert("Check-in guardado exitosamente.");
+      window.location.href = "dashboard.html";
+    }
+  </script>
+</body>
+</html>

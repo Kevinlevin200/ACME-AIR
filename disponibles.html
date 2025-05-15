@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vuelos Disponibles - ACME AIR</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="desktop-warning">
+        <h2>Este sitio solo está disponible en dispositivos móviles 📱</h2>
+        <p>Por favor accede desde tu celular para continuar.</p>
+      </div>
+      
+  <div class="container">
+    <img src="logo.png" alt="ACME AIR" class="logo" />
+    <h2>Vuelos Disponibles</h2>
+
+    <div id="infoRuta"></div>
+
+    <div class="vuelos" id="vuelosDisponibles"></div>
+
+    <button class="btn" onclick="window.location.href='dashboard.html'">VOLVER</button>
+  </div>
+
+  <script>
+    const origen = localStorage.getItem("origen") || "Bogotá";
+    const destino = localStorage.getItem("destino") || "Medellín";
+    const salida = localStorage.getItem("fechaSalida") || "2025-05-20";
+
+    document.getElementById("infoRuta").innerHTML = `
+      <p><strong>Origen:</strong> ${origen} → <strong>Destino:</strong> ${destino}</p>
+      <p><strong>Fecha de salida:</strong> ${salida}</p>
+    `;
+
+    const vuelos = [
+      { hora: "08:00 - 10:00", precio: "$180.000" },
+      { hora: "12:30 - 14:30", precio: "$200.000" },
+      { hora: "17:00 - 19:00", precio: "$220.000" },
+    ];
+
+    const contenedor = document.getElementById("vuelosDisponibles");
+
+    vuelos.forEach((vuelo, index) => {
+      const div = document.createElement("div");
+      div.className = "tarjeta-vuelo";
+      div.innerHTML = `
+        <p><strong>Horario:</strong> ${vuelo.hora}</p>
+        <p><strong>Precio:</strong> ${vuelo.precio}</p>
+        <button onclick="seleccionarVuelo(${index})" class="seleccionar">Seleccionar</button>
+      `;
+      contenedor.appendChild(div);
+    });
+
+    function seleccionarVuelo(index) {
+      const vueloSeleccionado = {
+        origen,
+        destino,
+        fecha: salida,
+        hora: vuelos[index].hora,
+        precio: vuelos[index].precio,
+      };
+
+      localStorage.setItem("vueloSeleccionado", JSON.stringify(vueloSeleccionado));
+      alert("Vuelo seleccionado exitosamente.");
+      window.location.href = "checkin.html";
+    }
+  </script>
+</body>
+</html>
